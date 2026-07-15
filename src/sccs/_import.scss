@@ -1,0 +1,16 @@
+// CORE
+// basic building blocks, typically single html tags
+@import "utility/variables";
+@import "utility/functions";
+@import "base/base";
+@import "core/_button.scss";
+@import "core/_typography";
+@import "core/form";
+@import "common/_common";
+@import "layout/_site-header";
+@import "layout/_site-footer";
+
+
+@import "pages/_inner";
+@import "pages/_home";
+@import "pages/_how-it-works";

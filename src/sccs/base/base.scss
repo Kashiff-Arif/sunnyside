@@ -1,0 +1,46 @@
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+    @media screen and (max-width: 1600px) {
+        font-size: 90%;
+    }
+    @media screen and (max-width: 991px) {
+        font-size: 85%;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    font-weight: 400;
+    background-color: #fff;
+    color:#000;
+    font-size:rem(16px);
+    font-family: $primary-font;
+    &.no-scroll {
+        overflow: hidden;
+        position: fixed;
+    }
+}
+
+.container {
+    width:100%;
+    max-width: 1585px;
+    @include push--auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media screen and (max-width:1200px){
+        padding:0 20px;
+    }
+    &.md{
+        max-width:1200px;
+    }
+}

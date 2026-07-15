@@ -1,0 +1,62 @@
+:root {
+    --primary: #FFD737;
+    --secondary: #fff;
+    --textcolor: #fff;
+    --textcolor-secondary: #414141;
+    --gray:#A7A9AC;
+    --bg:#fff;
+}
+
+@import "functions";
+// Fonts
+
+$primary-font: "Raleway", sans-serif;
+$secondary-font:  "Poppins", sans-serif;
+
+//** Primary Font
+// font sizes
+$h--1: (
+    base: rem(80px),
+    mobile: rem(55px),
+    tablet: rem(65px),
+    wide: rem(80px),
+);
+$h--2: (
+    base: rem(50px),
+    mobile: rem(30px),
+    tablet: rem(40px),
+    wide: rem(50px),
+);
+$h--3: (
+    base: rem(50px),
+    mobile: rem(30px),
+    tablet: rem(40px),
+    wide: rem(50px),
+);
+$h--4: (
+    base: rem(40px),
+    mobile: rem(28px),
+    tablet: rem(34px),
+    wide: rem(40px),
+);
+$h--5: (
+    base: rem(28px),
+    mobile: rem(23px),
+    tablet: rem(25px),
+    wide: rem(28px),
+);
+$h--6: (
+    base: rem(18px),
+    mobile: rem(15px),
+    tablet: rem(15px),
+    wide: rem(18px),
+);
+$p: rem(24px);
+$p--large: rem(24px);
+$p--medium: rem(21px);
+$p--small: rem(17px);
+$breakpoints: (
+    mobile: 320px,
+    tablet: 991px,
+    wide: 1300px,
+) !default;
