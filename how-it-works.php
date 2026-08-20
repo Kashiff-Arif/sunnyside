@@ -11,7 +11,7 @@ include_once "includes/header.php";
     <!-- How Work Banner -->
     <section class="inner-banner">
         <div class="container">
-            <div class="d-flex">
+            <div class="d-flex align-items-center">
                 <div class="col-left">
                     <div class="sectionHead">
                         <h2 class="sectionHead__subtitle">How Sunnyside Works</h2>
@@ -158,7 +158,7 @@ include_once "includes/header.php";
                     <h4>Without Sunnyside</h4>
                     <p>The habit loop runs unbroken. Each drink reinforces the next. Willpower alone isn't enough to break it.</p>
                     <div class="image">
-                        <img src="src/images/how-works/diagram1.svg" alt="" class="img-fluid" loading="lazy">
+                        <img src="src/images/how-works/diagram1.png" alt="" class="img-fluid" loading="lazy">
                     </div>
                 </div>
                 <div class="col-right" style="--bg:#053E65">
@@ -224,8 +224,9 @@ include_once "includes/header.php";
                     
                     <div>
                         <h4>See if medication is right</h4>
+                        <h5 class="d-md-block"><span>OPTIONAL </span>• MUST BE APPROVED BY A LICENSED CLINICIAN</h5>
                             <img src="src/images/how-works/method-img2.png" alt="" class="img-fluid" loading="lazy">
-                        <h5><span>OPTIONAL </span>• MUST BE APPROVED BY A LICENSED CLINICIAN</h5>
+                        <h5 class="d-block d-md-none"><span>OPTIONAL </span>• MUST BE APPROVED BY A LICENSED CLINICIAN</h5>
                         <p>
                             We’ll never pressure you, but medication to help with alcohol cravings is available for those who qualify. It’s a powerful combination that can help you take that first step.
                         </p>
@@ -509,7 +510,7 @@ include_once "includes/header.php";
         <div class="d-flex">
             <div class="col">
                 <div class="card">
-                    <div class="card__image img-hover">
+                    <div class="card__image">
                         <img src="src/images/how-works/get-support-img1.png" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="card__content">
@@ -520,7 +521,7 @@ include_once "includes/header.php";
             </div>
             <div class="col">
                 <div class="card">
-                    <div class="card__image img-hover">
+                    <div class="card__image">
                         <img src="src/images/how-works/get-support-img2.png" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="card__content">
@@ -531,7 +532,7 @@ include_once "includes/header.php";
             </div>
             <div class="col">
                 <div class="card">
-                    <div class="card__image img-hover">
+                    <div class="card__image">
                         <img src="src/images/how-works/get-support-img3.png" alt="" class="img-fluid" loading="lazy">
                     </div>
                     <div class="card__content">

@@ -11,33 +11,31 @@ include_once "includes/header.php";
             <div class="container">
                 <div class="hero__inner">
                     <div class="hero__left">
-                        <ul>
-                            <li>
-                                <span>
-                                    <img src="src/images/svg/star.svg" alt="" class="img-fluid">
-                                    <img src="src/images/svg/star.svg" alt="" class="img-fluid">
-                                    <img src="src/images/svg/star.svg" alt="" class="img-fluid">
-                                    <img src="src/images/svg/star.svg" alt="" class="img-fluid">
-                                    <img src="src/images/svg/star.svg" alt="" class="img-fluid">
-                                </span>
-                                Trusted by 600,000+ members
-                            </li>
-                            <li>100% online & private</li>
+                        <h1>Medication to drink less. Sunnyside to make it last.</h1>
+                        <ul class="list">
+                            <li>Alcohol moderation or sobriety—your choice</li>
+                            <li>Medication prescribed by licensed clinicians</li>
+                            <li>Clinically validated habit-change program</li>
+                            <li>96.7% of members drink less*</li>
                         </ul>
-                        <h1><span>Make alcohol a smaller</span> <span>part of your story.</span></h1>
-                        <p>Sunnyside is a complete system for making real, lasting changes to the way you drink. Habit change, medication, and human connection.</p>
+                        <div class="d-flex">
+                            <div class="button-row">
+                                <a href="#" class="btn btn-primary">TAKE THE QUIZ TO START</a>
+                            </div>
+                            <img src="src/images/home/trust-list.png" alt="" class="img-fluid" >
+                        </div>
                     </div>
                     <div class="hero__right">
                         <div class="hero__right--image">
-                            <img src="src/images/home/hero-img2.webp" alt="" class="img-fluid" loading="lazy">
+                            <img src="src/images/home/hero-img.png" alt="" class="img-fluid" loading="lazy">
                             <!-- For Responsive -->
-                            <img src="src/images/home/hero-img2.webp" alt="" class="img-fluid responsive-img d-none" loading="lazy">
+                            <img src="src/images/home/hero-img-responsive.jpg" alt="" class="img-fluid responsive-img d-none" loading="lazy">
                         </div>
                     </div>
                 </div>
-                <div class="hero__responsiveDesc">
+                <!-- <div class="hero__responsiveDesc">
                     <p>Sunnyside is a complete system for making real, lasting changes to the way you drink. Habit change, medication, and human connection.</p>
-                </div>
+                </div> -->
             </div>
         </section>
         <!-- Marque Desktop Section -->
@@ -73,10 +71,12 @@ include_once "includes/header.php";
                         <div class="card">
                             <div class="card__content">
                                 <div class="tag">MEDICATION</div>
-                                <h2>Alcohol craving medication with a support system.</h2>
+                                <h2>Alcohol craving medication paired with our proven habit change app and human coaching.</h2>
                                 <div class="button-row">
                                     <a href="#" class="btn btn-primary medium">See if you qualify</a>
+                                    <p>Starts at $99/mo</p>
                                 </div>
+                                
                             </div>
                             <div class="card__image">
                                 <img src="src/images/home/app-feature-img1.png" alt="" class="img-fluid" loading="lazy">
@@ -87,10 +87,12 @@ include_once "includes/header.php";
                         <div class="card" style="--bg:#FFD737">
                             <div class="card__content">
                                 <div class="tag" style=" --textcolor:#000;">HABITS</div>
-                                <h2>Habit-change app to help you drink less or quit.</h2>
+                                <h2>Alcohol habit change app with evidence-based tools to help you drink less or quit.</h2>
                                 <div class="button-row">
                                     <a href="#" class="btn btn-primary medium">TRY FOR FREE</a>
+                                    <p>Starts at $8.25/mo</p>
                                 </div>
+                                 
                             </div>
                             <div class="card__image">
                                 <img src="src/images/home/app-feature-img2.png" alt="" class="img-fluid" loading="lazy">
@@ -187,19 +189,19 @@ include_once "includes/header.php";
                                 <div class="icon">
                                     <img src="src/images/home/stats-icon1.svg" alt="" class="img-fluid">
                                 </div>
-                                <span>96.7%</span> report drinking less*
+                                <div><span>96.7%</span> report drinking less*</div>
                             </li>
                             <li>
                                 <div class="icon">
                                     <img src="src/images/home/stats-icon2.svg" alt="" class="img-fluid">
                                 </div>
-                                <span>33%</span> reduction in weekly consumption
+                                <div><span>33%</span> reduction in weekly consumption</div>
                             </li>
                             <li>
                                 <div class="icon">
                                     <img src="src/images/home/stats-icon3.svg" alt="" class="img-fluid">
                                 </div>
-                                <span> 90%</span> report binge-drinking less*
+                                <div><span> 90%</span> report binge-drinking less*</div>
                             </li>
                         </ul>
                         <div class="button-row">
@@ -249,7 +251,7 @@ include_once "includes/header.php";
                                     </div>
                                     <div class="card__number"><span><i>2</i></span></div>
                                     <h4>Personalize your program</h4>
-                                    <p>We want to learn about you and your goals. Take a quick assessment and we’ll create your first plan to get started.</p>
+                                    <p>Want more support with medication, or just need the basics? You’re always in control at Sunnyside.</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -259,7 +261,7 @@ include_once "includes/header.php";
                                     </div>
                                     <div class="card__number"><span><i>3</i></span></div>
                                     <h4>Engage in simple routines</h4>
-                                    <p>We want to learn about you and your goals. Take a quick assessment and we’ll create your first plan to get started.</p>
+                                    <p>From daily nudges, to reminders, to drink tracking, we make it easy to make lasting habit change around your drinking.</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -269,7 +271,7 @@ include_once "includes/header.php";
                                     </div>
                                     <div class="card__number"><span><i>4</i></span></div>
                                     <h4>See and feel the results</h4>
-                                    <p>We want to learn about you and your goals. Take a quick assessment and we’ll create your first plan to get started.</p>
+                                    <p>At Sunnyside, we’re all about celebrating your wins, and helping you stay on course through motivation.</p>
                                 </div>
                             </div>
                         </div>
@@ -296,7 +298,7 @@ include_once "includes/header.php";
                 </div>
             </div>
             <div class="row">
-                <div class="col thinsDiffrently__left">
+                <div class="col thingsDiffrently__left">
                     <h4>Sunnyside</h4>
                     <ul>
                         <li>
@@ -329,7 +331,7 @@ include_once "includes/header.php";
                         </li>
                     </ul>
                 </div>
-                <div class="col thinsDiffrently__right">
+                <div class="col thingsDiffrently__right">
                     <h4>Other Alcohol Programs</h4>
                     <ul>
                         <li>
@@ -401,7 +403,7 @@ include_once "includes/header.php";
                             </ul>
                         </div>
                     </div>
-                    <div class="piller green dark less-spacing">
+                    <div class="piller green dark">
                         <div class="piller__content">
                             <h5>PSYCHOLOGY & NEUROSCIENCE</h5>
                             <h4>A complete program to create long-term change that sticks.</h4>
@@ -416,9 +418,9 @@ include_once "includes/header.php";
                                 <a href="#" class="btn btn-white large">USE SCIENCE TO DRINK LESS</a>
                             </div>
                         </div>
-                        <div class="piller__imageWrapper">
-                            <img src="src/images/home/piller-img2.png" alt="" class="img-fluid desktop-img" loading="lazy">
-                            <img src="src/images/home/piller-img2-responsive.png" alt="" class="img-fluid responsive-img" loading="lazy">
+                        <div class="piller__imageWrapper medium-img">
+                            <img src="src/images/home/piller-img2.png" alt="" class="img-fluid" loading="lazy">
+                            <!-- <img src="src/images/home/piller-img2-responsive.png" alt="" class="img-fluid responsive-img" loading="lazy"> -->
                         </div>
                     </div>
                         <div class="piller purple">
@@ -432,7 +434,7 @@ include_once "includes/header.php";
                                 <a href="#" class="btn btn-white large">JOIN THE COMMUNITY</a>
                             </div>
                         </div>
-                        <div class="piller__imageWrapper">
+                        <div class="piller__imageWrapper medium-img">
                             <img src="src/images/home/piller-img3.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
@@ -455,117 +457,80 @@ include_once "includes/header.php";
                         <li><img src="src/images/home/logo/4.svg" alt="" class="img-fluid" loading="lazy"></li>
                     </ul>
                 </div>
-            </div>
-            <div class="position-relative">
+                <div class="position-relative">
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="board-member ">
-                                <div class="board-member__image img-hover">
+                                <div class="board-member__image">
                                     <img src="src/images/home/board-member/img1.png" alt="" class="img-fluid" loading="lazy">
                                 </div>
                                 <div class="board-member__content">
                                     <span class="board-member__category">Alcohol use disorder</span>
                                     <h4 class="board-member__name">Dr. Nehal Vadhan, MD</h4>
+                                    <h5>Clinical Psychologist & Addiction Researcher, Hofstra/Northwell</h5>
                                     <p>
-                                        A board certified doctor, Dr. Nehal Vadhan has led numerous groundbreaking studies around alcohol care 
+                                        Associate Professor of Psychiatry at the Zucker School of Medicine at Hofstra/Northwell, where he directs research on substance use and problem drinking. He has led multiple clinical studies of brief, telehealth-based interventions for alcohol — the science behind programs like Sunnyside.
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="board-member">
-                                <div class="board-member__image img-hover">
+                                <div class="board-member__image">
                                     <img src="src/images/home/board-member/img2.png" alt="" class="img-fluid" loading="lazy">
                                 </div>
                                 <div class="board-member__content">
                                     <span class="board-member__category">Psychology</span>
                                     <h4 class="board-member__name">Dr. Haley Treloar Padvano</h4>
+                                    <h5>Addiction Scientist,<br> Brown University</h5>
                                     <p>
-                                        A board certified doctor, Dr. Nehal Vadhan has led numerous groundbreaking studies around alcohol care 
+                                        Assistant Professor at Brown University's Center for Alcohol and Addiction Studies. Her work uses real-time, in-the-moment tracking to understand alcohol cravings — and to test how brief interventions and medication actually change the way people drink.
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="board-member">
-                                <div class="board-member__image img-hover">
-                                    <img src="src/images/home/board-member/img3.png" alt="" class="img-fluid" loading="lazy">
-                                </div>
-                                <div class="board-member__content">
-                                    <span class="board-member__category">Naltrexone advocate</span>
-                                    <h4 class="board-member__name">Dr. Joseph Volpicelli</h4>
-                                    <p>
-                                        A board certified doctor, Dr. Nehal Vadhan has led numerous groundbreaking studies around alcohol care 
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="board-member">
-                                <div class="board-member__image img-hover">
+                                <div class="board-member__image">
                                     <img src="src/images/home/board-member/img4.png" alt="" class="img-fluid" loading="lazy">
                                 </div>
                                 <div class="board-member__content">
                                     <span class="board-member__category">Practicing doctor</span>
-                                    <h4 class="board-member__name">Dr. Hrishikesh Belani</h4>
+                                    <h4 class="board-member__name">Dr. Hrishikesh Belani, MD, MPH</h4>
+                                    <h5>Board-Certified Internal & Addiction Medicine Physician</h5>
                                     <p>
-                                        A board certified doctor, Dr. Nehal Vadhan has led numerous groundbreaking studies around alcohol care 
+                                        Board-certified internist specializing in addiction medicine, and primary care director for the LA County Health Services Ambulatory Care Network. He's spent his career widening access to evidence-based substance-use care in one of the nation's largest public health systems.
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="board-member">
-                                <div class="board-member__image img-hover">
-                                    <img src="src/images/home/board-member/img1.png" alt="" class="img-fluid" loading="lazy">
+                                <div class="board-member__image">
+                                    <img src="src/images/home/board-member/img3.png" alt="" class="img-fluid" loading="lazy">
                                 </div>
                                 <div class="board-member__content">
-                                    <span class="board-member__category">Alcohol use disorder</span>
-                                    <h4 class="board-member__name">Dr. Nehal Vadhan, MD</h4>
+                                    <span class="board-member__category">Harm reduction expert</span>
+                                    <h4 class="board-member__name">Dr. Andrew Tatarsky, PhD</h4>
+                                    <h5>Founder, Center for Optimal Living,<br> Creator of IHRP</h5>
                                     <p>
-                                        A board certified doctor, Dr. Nehal Vadhan has led numerous groundbreaking studies around alcohol care 
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="board-member ">
-                                <div class="board-member__image img-hover">
-                                    <img src="src/images/home/board-member/img1.png" alt="" class="img-fluid" loading="lazy">
-                                </div>
-                                <div class="board-member__content">
-                                    <span class="board-member__category">Alcohol use disorder</span>
-                                    <h4 class="board-member__name">Dr. Nehal Vadhan, MD</h4>
-                                    <p>
-                                        A board certified doctor, Dr. Nehal Vadhan has led numerous groundbreaking studies around alcohol care 
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="board-member">
-                                <div class="board-member__image img-hover">
-                                    <img src="src/images/home/board-member/img2.png" alt="" class="img-fluid" loading="lazy">
-                                </div>
-                                <div class="board-member__content">
-                                    <span class="board-member__category">Psychology</span>
-                                    <h4 class="board-member__name">Dr. Haley Treloar Padvano</h4>
-                                    <p>
-                                        A board certified doctor, Dr. Nehal Vadhan has led numerous groundbreaking studies around alcohol care 
+                                        Clinical psychologist who created Integrative Harm Reduction Psychotherapy and founded the Center for Optimal Living. For three decades he's championed meeting people where they are — moderation or abstinence, without judgment — the exact philosophy behind "your choice."
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="swiper-controls">
+                <div class="swiper-controls">
                     <div class="swiper-buttons">
                         <div class="swiper-button-next swiper-button"></div>
                         <div class="swiper-button-prev swiper-button"></div>
                     </div>
-                </div> -->
+                </div>
             </div>
+            </div>
+            
             
             <div class="separator"></div>
         </section>
@@ -580,69 +545,55 @@ include_once "includes/header.php";
                     <div class="swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="member position-relative img-hover">
+                                <div class="member position-relative">
                                     <span class="play"></span>
                                     <div class="member__image">
                                         <img src="src/images/home/member/img1.png" alt="" class="img-fluid" loading="lazy">
                                     </div>
-                                    <h4><span>Malcolm</span> Sunnyside Member</h4>
+                                    <div class="member__content">
+                                        <h4>Erica</h4>
+                                        <h5>Real Sunnyside Member</h5>
+                                    </div>
                                     <a href="#" class="abs-link" data-size="medium" data-path="src/data/video.html"
                                 data-toggle="custom-modal"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="member position-relative img-hover">
+                                <div class="member position-relative">
                                     <span class="play"></span>
                                     <div class="member__image">
                                         <img src="src/images/home/member/img2.png" alt="" class="img-fluid" loading="lazy">
                                     </div>
-                                    <h4><span>Haley</span> Sunnyside Member</h4>
+                                    <div class="member__content">
+                                        <h4>Malcolm</h4>
+                                        <h5>Real Sunnyside Member</h5>
+                                    </div>
                                     <a href="#" class="abs-link" data-size="medium" data-path="src/data/video.html"
                                 data-toggle="custom-modal"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="member position-relative img-hover">
+                                <div class="member position-relative">
                                     <span class="play"></span>
                                     <div class="member__image ">
                                         <img src="src/images/home/member/img3.png" alt="" class="img-fluid" loading="lazy">
                                     </div>
-                                    <h4><span>Julie</span> Sunnyside Member</h4>
-                                    <a href="#" class="abs-link" data-size="medium" data-path="src/data/video.html"
-                                data-toggle="custom-modal"></a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="member position-relative img-hover">
-                                    <span class="play"></span>
-                                    <div class="member__image">
-                                        <img src="src/images/home/member/img4.png" alt="" class="img-fluid" loading="lazy">
+                                    <div class="member__content">
+                                        <h4>Parker</h4>
+                                        <h5>Real Sunnyside Member</h5>
                                     </div>
-                                    <h4><span>Susan</span> Sunnyside Member</h4>
                                     <a href="#" class="abs-link" data-size="medium" data-path="src/data/video.html"
                                 data-toggle="custom-modal"></a>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="member position-relative img-hover">
-                                    <span class="play"></span>
-                                    <div class="member__image">
-                                        <img src="src/images/home/member/img5.png" alt="" class="img-fluid" loading="lazy">
-                                    </div>
-                                    <h4><span>Donald</span> Sunnyside Member</h4>
-                                    <a href="#" class="abs-link" data-size="medium" data-path="src/data/video.html"
-                                data-toggle="custom-modal"></a>
-                                </div>
-                            </div>
-                            
                         </div>
                     </div>
-                    <!-- <div class="swiper-controls">
+                    <div class="swiper-controls ">
                         <div class="swiper-buttons">
                             <div class="swiper-button-next swiper-button"></div>
                             <div class="swiper-button-prev swiper-button"></div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="button-row text-center">
                     <a href="#" class="btn btn-primary large">READY TO DRINK LESS?</a>
@@ -670,7 +621,7 @@ include_once "includes/header.php";
                     <a href="#" class="btn btn-primary large">JOIN SUNNYSIDE TODAY</a>
                 </div>
             </div>
-        </section>
+        </section> 
     </div>
     <?php include_once "includes/footer.php"; ?>
 <?php include_once "includes/scripts.php"; ?>

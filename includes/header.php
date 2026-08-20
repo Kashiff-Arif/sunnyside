@@ -53,7 +53,7 @@ if (isset($innerPages)) {
     <!-- modal -->
 
     <div class="modal custom-modal fade" tabindex="-1" role="dialog">
-
+          <div class="custom-modal__overlay"></div>
         <div class="modal-dialog modal-dialog-centered">
 
             <div class="modal-content">
@@ -85,7 +85,7 @@ if (isset($innerPages)) {
                 <div class="headerWrapper">
                     <!-- Site Logo -->
                     <div class="header__logo">
-                        <a href="@index.php"><img src="src/images/logo.svg" alt="" class="img-fluid"></a>
+                        <a href="index.php"><img src="src/images/logo.svg" alt="" class="img-fluid"></a>
                     </div>
                     <!-- Nav Links -->
                     <nav>

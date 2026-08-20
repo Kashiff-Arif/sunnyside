@@ -209,6 +209,16 @@ section{
   height: 100%;
   z-index: 1060;
   display:none;
+    &.is-open {
+        display: block;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+    }
 }
 
 
@@ -276,7 +286,7 @@ section{
         padding-top:rem(50px);
     }
     section{
-        padding:rem(50px) 0;
+        padding:rem(60px) 0;
     }
     .mt-90{
         margin-top:45px !important;
@@ -303,6 +313,12 @@ section{
     }
 }
 @media screen and (max-width:767px){
+    .d-md-none{
+        display:none !important;
+    }
+    .d-md-block{
+        display:block !important;
+    }
     .contentWrapper{
         padding-top:75px;
     }
@@ -310,6 +326,9 @@ section{
         &__title{
             font-size:rem(35px);
             line-height: 30px;
+        }
+        &__subtitle{
+            font-size:11px;
         }
         &__desc{
             p{
@@ -329,27 +348,31 @@ section{
         }
     }
     .note{
+        h4{
+            font-size:12px;
+        }
         p{
             font-size:rem(23px);
             line-height: 30px;
         }
     }
     p{
-        font-size:rem(17px);
+        font-size:rem(16px);
+        line-height:20px !important;
     }
 }
 @media screen and (max-width:667px){
      .sectionHead{
         &__title{
-            font-size:rem(32px);
-            line-height: 28px;
+            font-size:rem(33px);
+            line-height: 31px;
         }
     }
     .front-page{
         .sectionHead{
             &__title{
-                font-size:rem(32px);
-                line-height: 28px;
+                font-size:rem(33px);
+                line-height: 31px;
             }
         }
     }

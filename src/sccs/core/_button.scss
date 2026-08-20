@@ -31,6 +31,9 @@
         max-width:267px;
         height:56px;
         padding:0 5px;
+        @media screen and (max-width:767px){
+            height:47px;
+        }
     }
     &.large{
         min-width:455px;

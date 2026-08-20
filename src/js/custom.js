@@ -83,29 +83,30 @@ var sunnySide = {
             spaceBetween: 10,
             speed: 1000,
             allowTouchMove: true, 
-
+            grabCursor: true,
+            freeMode: true,
+              navigation: {
+                nextEl: ".board-members .swiper-button-next",
+                prevEl: ".board-members .swiper-button-prev",
+            },
             breakpoints: {
                 1201: {
-                    slidesPerView: 4.5,
-                    slidesPerGroup: 3,
-                    spaceBetween: 29,
-                    allowTouchMove: false, 
-                },
-                992: {
-                    slidesPerView: 4.5,
-                    slidesPerGroup: 3,
-                    spaceBetween: 29,
-                    allowTouchMove: false, 
-                },
-                768: {
-                    slidesPerView: 3.3,
-                    slidesPerGroup: 2,
+                    slidesPerView: 4,
                     spaceBetween: 29,
                     allowTouchMove: true, 
                 },
-                500: {
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 29,
+                    allowTouchMove: true, 
+                },
+                768: {
+                    slidesPerView: 3.3,
+                    spaceBetween: 29,
+                    allowTouchMove: true, 
+                },
+                667: {
                     slidesPerView: 2.3,
-                    slidesPerGroup: 2,
                     spaceBetween: 20,
                     allowTouchMove: true, 
                 },
@@ -116,44 +117,46 @@ var sunnySide = {
         // MEMBERS (GSAP CONTROLLED)
         // =========================
         members = new Swiper(".sunnyside-members .swiper", {
-            slidesPerView: 1,
+            slidesPerView: 1.2,
             spaceBetween: 10,
             speed: 1000,
             allowTouchMove: true, 
+            grabCursor: true,
+            freeMode: true, 
             navigation: {
                 nextEl: ".sunnyside-members .swiper-button-next",
                 prevEl: ".sunnyside-members .swiper-button-prev",
             },
             breakpoints: {
                 1451: {
-                    slidesPerView: 5,
+                    slidesPerView: 4,
                     slidesPerGroup: 1,
                     spaceBetween: 50,
-                    allowTouchMove: false, 
+                    // allowTouchMove: false, 
                 },
                 1200: {
-                    slidesPerView: 5,
+                    slidesPerView: 4,
                     slidesPerGroup: 1,
                     spaceBetween: 25,
-                    allowTouchMove: false, 
+                    // allowTouchMove: false, 
                 },
                 992: {
                     slidesPerView: 4,
                     slidesPerGroup: 1,
                     spaceBetween: 25,
-                    allowTouchMove: false, 
+                    // allowTouchMove: false, 
                 },
                 768: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 1,
+                    slidesPerView: 3.3,
+                    slidesPerGroup: 2,
                     spaceBetween: 20,
-                    allowTouchMove: true, 
+                    // allowTouchMove: true, 
                 },
-                500: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 1,
+                667: {
+                    slidesPerView: 2.3,
+                    slidesPerGroup: 2,
                     spaceBetween: 20,
-                    allowTouchMove: true, 
+                    // allowTouchMove: true, 
                 },
             },
         });
@@ -161,69 +164,77 @@ var sunnySide = {
         // =========================
         // SAFE GSAP INIT
         // =========================
-        setTimeout(function () {
-            initAdvisoryScroll();
-            initMembersScroll();
-        }, 150);
+        // setTimeout(function () {
+        //     initAdvisoryScroll();
+        //     initMembersScroll();
+        // }, 150);
     },
-
     configureModal: function () {
-        $("body").on("click", "*[data-toggle='custom-modal']", function (e) {
-            e.preventDefault();
 
-            $(".custom-modal").removeClass("large");
+    // Open modal
+    $("body").on("click", "*[data-toggle='custom-modal']", function (e) {
+        e.preventDefault();
 
-            var url = $(this).attr("data-path");
+        $(".custom-modal").removeClass("large medium small");
 
-            var size = $(this).attr("data-size");
+        var url = $(this).attr("data-path");
+        var size = $(this).attr("data-size");
+        var class_name = $(this).attr("data-class");
 
-            var class_name = $(this).attr("data-class");
+        $.get(url, function (data) {
 
-            $(".custom-modal").removeClass("large");
+            $(".custom-modal .modal-body").html(data);
 
-            $(".custom-modal").removeClass("medium");
+            if (size) {
+                $(".custom-modal").addClass(size);
+            }
 
-            $(".custom-modal").removeClass("small");
+            if (class_name) {
+                $(".custom-modal").attr("id", class_name);
+            }
 
-            $.get(url, function (data) {
-                $(".custom-modal").modal("show");
+            // Open
+            $(".custom-modal").addClass("is-open");
 
-                $(".custom-modal .modal-body").html(data);
+            setTimeout(function () {
+                $(".custom-modal .modal-body").addClass("show");
+            }, 200);
 
-                if (size) {
-                    $(".custom-modal").addClass(size);
-                }
-
-                if (class_name) {
-                    $(".custom-modal").attr("id", class_name);
-                }
-
-                setTimeout(function () {
-                    $(".custom-modal .modal-body").addClass("show");
-                }, 200);
-
-                $("body").addClass("remove-scroll");
-            });
+            $("body").addClass("remove-scroll");
         });
+    });
 
-        $(".modal").on("hidden.bs.modal", function () {
-            $(".custom-modal .modal-body").removeClass("show");
 
+    // Overlay click → close modal
+    $("body").on("click", ".custom-modal__overlay", function () {
+        closeCustomModal();
+    });
+
+
+    // Close button → close modal
+    $("body").on("click", ".popup-cross-icon", function () {
+        closeCustomModal();
+    });
+
+
+    // Close function
+    function closeCustomModal() {
+
+        $(".custom-modal").removeClass("is-open");
+
+        $(".custom-modal .modal-body").removeClass("show");
+
+        setTimeout(function () {
             $(".custom-modal .modal-body").empty();
 
-            $(".custom-modal").removeClass("account-modal");
+            $(".custom-modal").removeClass("large medium small");
+            $(".custom-modal").removeAttr("id");
 
             $("body").removeClass("remove-scroll");
+        }, 300);
+    }
+},
 
-            $(".custom-modal").removeClass("large");
-
-            $(".custom-modal").removeClass("medium");
-
-            $(".custom-modal").removeClass("small");
-
-            $(".custom-modal").removeAttr("id");
-        });
-    },
 };
 
 
@@ -245,62 +256,62 @@ var sunnySide = {
 // =========================
 // ADVISORY SCROLL CONTROL
 // =========================
-function initAdvisoryScroll() {
+// function initAdvisoryScroll() {
 
-    if (!advisoryBoard) return;
+//     if (!advisoryBoard) return;
 
-    if (window.innerWidth <= 992) return;
+//     if (window.innerWidth <= 992) return;
 
-    let total = advisoryBoard.slides.length;
-    let perView = advisoryBoard.params.slidesPerView;
+//     let total = advisoryBoard.slides.length;
+//     let perView = advisoryBoard.params.slidesPerView;
 
-    if (total <= perView) return;
+//     if (total <= perView) return;
 
-    let steps = total - 1;
+//     let steps = total - 1;
 
-    ScrollTrigger.create({
-        trigger: ".board-members",
-        start: "top top",
-        end: () => "+=" + (steps * 250),
-        pin: true,
-        scrub: 0.8,
-        anticipatePin: 1,
+//     ScrollTrigger.create({
+//         trigger: ".board-members",
+//         start: "top top",
+//         end: () => "+=" + (steps * 250),
+//         pin: true,
+//         scrub: 0.8,
+//         anticipatePin: 1,
 
-        onUpdate: (self) => {
-            let index = Math.round(self.progress * steps);
-            advisoryBoard.slideTo(index);
-        }
-    });
-}
+//         onUpdate: (self) => {
+//             let index = Math.round(self.progress * steps);
+//             advisoryBoard.slideTo(index);
+//         }
+//     });
+// }
 
 
 // =========================
 // MEMBERS SCROLL CONTROL
 // =========================
-function initMembersScroll() {
+// function initMembersScroll() {
 
-    if (!members) return;
+//     if (!members) return;
 
-    if (window.innerWidth <= 992) return;
+//     if (window.innerWidth <= 992) return;
 
-    let total = members.slides.length;
-    let perView = members.params.slidesPerView;
+//     let total = members.slides.length;
+//     let perView = members.params.slidesPerView;
 
-    if (total <= perView) return;
+//     if (total <= perView) return;
 
-    let steps = total - 1;
+//     let steps = total - 1;
 
-    ScrollTrigger.create({
-        trigger: ".sunnyside-members",
-        start: "top top",
-        end: () => "+=" + (steps * 250),
-        pin: true,
-        scrub: 0.8,
-        anticipatePin: 1,
+//     ScrollTrigger.create({
+//         trigger: ".sunnyside-members",
+//         start: "top top",
+//         end: () => "+=" + (steps * 250),
+//         pin: true,
+//         scrub: 0.8,
+//         anticipatePin: 1,
 
-        onUpdate: (self) => {
-            let index = Math.round(self.progress * steps);
-            members.slideTo(index);
-        }
-    });
-}
+//         onUpdate: (self) => {
+//             let index = Math.round(self.progress * steps);
+//             members.slideTo(index);
+//         }
+//     });
+// }
