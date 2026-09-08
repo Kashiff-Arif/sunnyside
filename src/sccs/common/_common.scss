@@ -205,3 +205,136 @@ $data-gap-list: 0, 2, 3, 5, 6, 7, 8, 9, 10, 12, 15, 17, 18, 19, 20, 21, 22, 25, 
         left: 125%;
     }
 }
+
+.breadcrumb{
+    list-style: none;
+    display:flex;
+    align-items: center;
+    margin-bottom: 18px;
+    li{
+        font-size:14px !important;
+        line-height: 25px !important;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-family: $secondary-font;
+        position: relative;
+        display:inline-flex;
+        align-items: center;
+        gap:10px;
+        letter-spacing: 1px;
+       
+        &:not(:last-child){
+            margin-right:7px;
+            &:after{
+                position: relative;
+                display: inline-block;
+                content:"〉"
+            }
+        }
+        a{
+            &:hover{
+                color:var(--primary);
+            }
+        }
+         @media screen and (max-width:767px){
+            font-size:10px !important;
+            line-height: 20px !important;
+            gap:6px;
+            &:not(:last-child){
+                margin-right: 4px;
+            }
+        }
+    }
+    @media screen and (max-width:767px){
+        margin-bottom: 11px;
+    }
+}
+
+.video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.video-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.video-modal__overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.video-modal__content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1000px;
+}
+
+.video-modal__video {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+
+    background: #000;
+}
+
+.video-modal__close {
+    position: absolute;
+
+    top: -50px;
+    right: 0;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: #fff;
+    font-size: 40px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.member {
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+
+    .video-modal {
+        padding: 20px;
+    }
+
+    .video-modal__close {
+        top: -45px;
+        font-size: 32px;
+    }
+
+}

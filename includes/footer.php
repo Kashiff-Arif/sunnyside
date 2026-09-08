@@ -4,11 +4,11 @@
         <div class="footer__top">
             <div class="footer__logo">
                 <a href="#">
-                    <img class="img-fluid" alt="" src="src/images/logo-white.svg">
+                    <img class="img-fluid" alt="Sunnyside" src="src/images/logo-white.svg">
                 </a>
             </div>
             <div class="logo">
-                <img src="src/images/certified.svg" alt="" class="img-fluid" loading="lazy">
+                <img src="src/images/certified.svg" alt="certified logo" class="img-fluid" loading="lazy">
             </div>
         </div>
         <div class="footer__middle">
@@ -107,5 +107,3 @@
         </div>
     </div>
 </footer>
-
-</main>

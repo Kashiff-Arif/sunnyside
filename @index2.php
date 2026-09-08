@@ -5,7 +5,8 @@ include_once "includes/header.php";
 
 
     <!-- Page Wrapper -->
-    <div class="contentWrapper updated">
+    <main>
+        <div class="contentWrapper updated">
        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
@@ -278,8 +279,8 @@ include_once "includes/header.php";
                     </div>
                     <div class="swiper-controls">
                         <div class="swiper-buttons">
-                            <div class="swiper-button-next swiper-button"></div>
-                            <div class="swiper-button-prev swiper-button"></div>
+                                    <button type="button" class="swiper-button-next swiper-button" aria-label="Next guidance step"></button>
+                                    <button type="button" class="swiper-button-prev swiper-button" aria-label="Previous guidance step"></button>
                         </div>
                     </div>
                 </div>
@@ -403,7 +404,7 @@ include_once "includes/header.php";
                             </ul>
                         </div>
                     </div>
-                    <div class="piller green dark">
+                    <div class="piller green">
                         <div class="piller__content">
                             <h5>PSYCHOLOGY & NEUROSCIENCE</h5>
                             <h4>A complete program to create long-term change that sticks.</h4>
@@ -525,8 +526,8 @@ include_once "includes/header.php";
                 </div>
                 <div class="swiper-controls">
                     <div class="swiper-buttons">
-                        <div class="swiper-button-next swiper-button"></div>
-                        <div class="swiper-button-prev swiper-button"></div>
+                                    <button type="button" class="swiper-button-next swiper-button" aria-label="Next clinical advisory board member"></button>
+                                    <button type="button" class="swiper-button-prev swiper-button" aria-label="Previous clinical advisory board member"></button>
                     </div>
                 </div>
             </div>
@@ -589,8 +590,8 @@ include_once "includes/header.php";
                     </div>
                     <div class="swiper-controls ">
                         <div class="swiper-buttons">
-                            <div class="swiper-button-next swiper-button"></div>
-                            <div class="swiper-button-prev swiper-button"></div>
+                                    <button type="button" class="swiper-button-next swiper-button" aria-label="Next member story"></button>
+                                    <button type="button" class="swiper-button-prev swiper-button" aria-label="Previous member story"></button>
                         </div>
                     </div>
                 </div>
@@ -622,6 +623,7 @@ include_once "includes/header.php";
             </div>
         </section> 
     </div>
+    </main>
     <?php include_once "includes/footer.php"; ?>
 <?php include_once "includes/scripts.php"; ?>
 </body>

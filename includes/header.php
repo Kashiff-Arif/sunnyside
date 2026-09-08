@@ -21,10 +21,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- <link rel="icon" type="image/x-icon" href="src/images/favicon.png"> -->
     <link rel="preload" fetchpriority="high" as="image" href="src/images/logo.svg">
-    <link href="src/dist/main.min.css" rel="stylesheet">
+       <link rel="stylesheet" href="src/dist/main.min.css?v=<?php echo time(); ?>">
 
-    <!-- Livereload script for development -->
-    <script src="http://localhost:35751/livereload.js"></script> 
 </head>
 
 <?php
@@ -77,7 +75,6 @@ if (isset($innerPages)) {
     </div>
     <?php include_once "includes/svg-icons.php"; ?>
 
-    <main>
 
         <!-- Header -->
         <header class="header">
@@ -85,25 +82,26 @@ if (isset($innerPages)) {
                 <div class="headerWrapper">
                     <!-- Site Logo -->
                     <div class="header__logo">
-                        <a href="index.php"><img src="src/images/logo.svg" alt="" class="img-fluid"></a>
+                        <a href="index.php"><img src="src/images/logo.svg" alt="Sunnyside" class="img-fluid"></a>
                     </div>
                     <!-- Nav Links -->
-                    <nav>
+                    <nav id="site-navigation" aria-label="Primary navigation">
                         <ul>
                             <li><a href="how-it-works">How it works</a></li>
                             <li><a href="#">Medication</a></li>
                             <li><a href="#">Results</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><a href="blog">Blog</a></li>
+                            <li><a href="about">About</a></li>
                             <li><a href="#">Login</a></li>
                             <li><a href="#" class="btn btn-dafult">Get started</a></li>
                         </ul>
                     </nav>
                     <!-- Responsive Menu Icon -->
-                    <div class="header__menuIcon">
+                    <button type="button" class="header__menuIcon" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </div>
+                    </button>
                 </div>
             </div>
         </header>

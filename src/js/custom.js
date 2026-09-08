@@ -13,8 +13,8 @@ $(document).ready(function () {
 });
 
 var self1;
-var advisoryBoard;
-var members;
+// var advisoryBoard;
+// var members;
 
 var sunnySide = {
     init: function (options) {
@@ -36,12 +36,21 @@ var sunnySide = {
                 $(".header").removeClass("sticky");
             }
         });
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 40) {
+                $(".blog-search").addClass("sticky");
+            } else {
+                $(".blog-search").removeClass("sticky");
+            }
+        });
     },
 
     utilities: function () {
         $(".header__menuIcon").on("click", function () {
             $("html").toggleClass("overflow-hidden");
             $("body").toggleClass("menu-active");
+            $(this).attr("aria-expanded", $("body").hasClass("menu-active"));
+            $(this).attr("aria-label", $("body").hasClass("menu-active") ? "Close navigation menu" : "Open navigation menu");
         });
          $(".stickColumn").stick_in_parent({ container: $(".stickWrapper"), offset_top: 120 }); 
     },
@@ -79,7 +88,7 @@ var sunnySide = {
         // ADVISORY BOARD (GSAP CONTROLLED)
         // =========================
         advisoryBoard = new Swiper(".board-members .swiper", {
-            slidesPerView: 1.2,
+            slidesPerView: 1.10,
             spaceBetween: 10,
             speed: 1000,
             allowTouchMove: true, 
@@ -106,7 +115,7 @@ var sunnySide = {
                     allowTouchMove: true, 
                 },
                 667: {
-                    slidesPerView: 2.3,
+                    slidesPerView: 2.2,
                     spaceBetween: 20,
                     allowTouchMove: true, 
                 },
@@ -116,16 +125,16 @@ var sunnySide = {
         // =========================
         // MEMBERS (GSAP CONTROLLED)
         // =========================
-        members = new Swiper(".sunnyside-members .swiper", {
-            slidesPerView: 1.2,
+        testimonials = new Swiper(".testimonials .swiper", {
+            slidesPerView: 1.10,
             spaceBetween: 10,
             speed: 1000,
             allowTouchMove: true, 
             grabCursor: true,
             freeMode: true, 
             navigation: {
-                nextEl: ".sunnyside-members .swiper-button-next",
-                prevEl: ".sunnyside-members .swiper-button-prev",
+                nextEl: ".testimonials .swiper-button-next",
+                prevEl: ".testimonials .swiper-button-prev",
             },
             breakpoints: {
                 1451: {
@@ -148,13 +157,13 @@ var sunnySide = {
                 },
                 768: {
                     slidesPerView: 3.3,
-                    slidesPerGroup: 2,
+                    slidesPerGroup: 1,
                     spaceBetween: 20,
                     // allowTouchMove: true, 
                 },
                 667: {
-                    slidesPerView: 2.3,
-                    slidesPerGroup: 2,
+                    slidesPerView: 2.2,
+                    slidesPerGroup: 1,
                     spaceBetween: 20,
                     // allowTouchMove: true, 
                 },
@@ -315,3 +324,32 @@ var sunnySide = {
 //         }
 //     });
 // }
+function initMarquees() {
+    const marquees = document.querySelectorAll(".marquee-content");
+    marquees.forEach((marquee) => {
+        const wrapper = marquee.closest(".marquee-wrapper");
+        if (!wrapper) return;
+        marquee.querySelectorAll(".marquee-clone").forEach((clone) => {
+            clone.remove();
+        });
+
+        const originalItems = [...marquee.children];
+        if (wrapper.offsetWidth === 0) return;
+
+        let contentWidth = marquee.scrollWidth;
+        const wrapperWidth = wrapper.offsetWidth;
+
+        while (contentWidth < wrapperWidth * 2) {
+            originalItems.forEach((item) => {
+                const clone = item.cloneNode(true);
+                clone.classList.add("marquee-clone");
+                marquee.appendChild(clone);
+            });
+
+            contentWidth = marquee.scrollWidth;
+        }
+    });
+}
+initMarquees();
+window.addEventListener("resize", initMarquees);
+

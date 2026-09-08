@@ -67,8 +67,8 @@
             </div>
             <!-- <div class="swiper-controls">
                 <div class="swiper-buttons">
-                    <div class="swiper-button-next swiper-button"></div>
-                    <div class="swiper-button-prev swiper-button"></div>
+                    <button type="button" class="swiper-button-next swiper-button" aria-label="Next member story"></button>
+                    <button type="button" class="swiper-button-prev swiper-button" aria-label="Previous member story"></button>
                 </div>
             </div> -->
         </div>

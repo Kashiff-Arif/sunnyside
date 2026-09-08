@@ -119,8 +119,8 @@
         </div>
         <!-- <div class="swiper-controls">
             <div class="swiper-buttons">
-                <div class="swiper-button-next swiper-button"></div>
-                <div class="swiper-button-prev swiper-button"></div>
+                <button type="button" class="swiper-button-next swiper-button" aria-label="Next clinical advisory board member"></button>
+                <button type="button" class="swiper-button-prev swiper-button" aria-label="Previous clinical advisory board member"></button>
             </div>
         </div> -->
     </div>

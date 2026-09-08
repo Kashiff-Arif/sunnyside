@@ -32,12 +32,18 @@
 .pb-0{
     padding-bottom: 0;
 }
+.mb-25{
+    margin-bottom: 25px;
+}
+.mb-16{
+    margin-bottom: rem(16px) !important;
+}
 .mx-auto{
     margin-left:auto;
     margin-right:auto;
 
 }
-.img-fluid{
+img{
     max-width:100%;
     height:auto;
 }
@@ -54,19 +60,20 @@
 }
 section{
     --bg:#fff;
-    padding:rem(100px) 0;
+    padding:rem(90px) 0;
     background-color: var(--bg);
     @media screen and (max-width:1600px){
-        padding:rem(85px) 0;
+        padding:rem(75px) 0;
     }
 }
 .sectionHead{
     &__title{
         --width:100%;
-        font-size:rem(42px);
-        font-weight:900;
-        line-height: 52px;
+        font-size:rem(52px);
+        font-weight:800;
+        line-height: 63px;
         max-width:var(--width);
+        
     }
     &__subtitle{
         background: var(--primary);
@@ -93,16 +100,52 @@ section{
             
         }
     }
-}
-.front-page{
-    .sectionHead{
-        &__title{
-             font-size:rem(52px);
-            font-weight:800;
-            line-height: 63px;
+    &.h-size{
+        .sectionHead{
+            &__title{
+                font-size:rem(22px);
+                line-height: 63px;
+                border-bottom: 1px solid #E5E5E5;
+                margin-bottom: rem(45px);
+                font-weight:800;
+                @media screen and (max-width:767px){
+                    font-size:16px;
+                    line-height: 46px;
+                }
+            }
+        }
+    }
+    &.secondary{
+        .sectionHead{
+            &__title{
+                span{
+                    display:block;
+                    color:#8363E1;
+                    font-size:rem(52px);
+                    font-weight: 400;
+                    line-height: 53px;
+                    @media screen and (max-width:991px){
+                        font-size:rem(42px);
+                        line-height: 42px;
+                    }
+                    @media screen and (max-width:767px){
+                        font-size:29px;
+                        line-height: 32px;
+                    }
+                }
+            }
         }
     }
 }
+// .front-page{
+//     .sectionHead{
+//         &__title{
+//              font-size:rem(52px);
+//             font-weight:800;
+//             line-height: 63px;
+//         }
+//     }
+// }
 .separator{
     display:block;
     border-bottom: 1px solid #D7D7D7;
@@ -125,6 +168,9 @@ section{
         background-color: #000;
         border-radius: 100%;
         @include flex(center , center);
+        border:0;
+        padding:0;
+        appearance: none;
         &:after{
             font-size:17px;
         }
@@ -270,18 +316,18 @@ section{
 @media screen and (max-width:991px){
     .sectionHead{
         &__title{
-            font-size:rem(37px);
-            line-height: 44px;
+            font-size:rem(42px);
+            line-height: 40px;
         }
     }
-    .front-page{
-        .sectionHead{
-            &__title{
-                font-size:rem(42px);
-                line-height: 40px;
-            }
-        }
-    }
+    // .front-page{
+    //     .sectionHead{
+    //         &__title{
+    //             font-size:rem(42px);
+    //             line-height: 40px;
+    //         }
+    //     }
+    // }
     .separator{
         padding-top:rem(50px);
     }
@@ -293,6 +339,9 @@ section{
     }
     .mt-80{
         margin-top:45px !important;
+    }
+    .mb-80{
+        margin-bottom: 40px !important;
     }
     .mt-100{
         margin-top: 45px !important;
@@ -320,7 +369,7 @@ section{
         display:block !important;
     }
     .contentWrapper{
-        padding-top:75px;
+        padding-top:64px;
     }
     .sectionHead{
         &__title{
@@ -339,14 +388,14 @@ section{
             }
         }
     }
-    .front-page{
-        .sectionHead{
-            &__title{
-                font-size:rem(35px);
-                line-height: 30px;
-            }
-        }
-    }
+    // .front-page{
+    //     .sectionHead{
+    //         &__title{
+    //             font-size:rem(35px);
+    //             line-height: 30px;
+    //         }
+    //     }
+    // }
     .note{
         h4{
             font-size:12px;
@@ -368,11 +417,85 @@ section{
             line-height: 31px;
         }
     }
-    .front-page{
-        .sectionHead{
-            &__title{
-                font-size:rem(33px);
-                line-height: 31px;
+    // .front-page{
+    //     .sectionHead{
+    //         &__title{
+    //             font-size:rem(33px);
+    //             line-height: 31px;
+    //         }
+    //     }
+    // }
+}
+
+.trustpilot-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-left:30px;
+
+    .excellent {
+        font-size: clamp(12px, 5vw, 20px);
+        font-weight: 800;
+        line-height: 1;
+        color: #101820;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+    .stars {
+        display: flex;
+        gap: 2px;
+    }
+
+    .star {
+        width: clamp(14px, 7vw, 20px);
+        height: clamp(14px, 7vw, 20px);
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(9px, 5vw, 18px);
+        line-height: 1;
+        background: #00b67a;
+        color: white;
+
+        &.half {
+            background: linear-gradient(
+                90deg,
+                #00b67a 50%,
+                #d9d9d9 50%
+            );
+        }
+    }
+
+    .trustpilot-logo {
+        display: flex;
+        align-items: flex-end;
+        gap: 4px;
+        position: relative;
+        top:-3px;
+
+        color: #101820;
+        font-size: clamp(8px, 5vw, 17px);
+        font-weight: 700;
+
+        .logo-star {
+            color: #00b67a;
+            font-size: 24px;
+            top:2px;
+            position: relative;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .trustpilot-rating {
+        margin:11px 0 0;
+        .trustpilot-logo{
+            gap:2px;
+            .logo-star{
+                font-size:21px;
             }
         }
     }
