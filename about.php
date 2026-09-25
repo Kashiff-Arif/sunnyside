@@ -427,65 +427,71 @@ include_once "includes/header.php";?>
             </div>
         </div>
     </section>
-    <section class="info-banners pt-0">
+    <section class="cta-banner p-0 ">
         <div class="container">
-            <div class="cta-banner mb-25">
-                <div class="cta-banner__inner">
-                    <div class="cta-banner__inner--image">
-                        <img src="src/images/home/infobanner2.png" alt="Person starting a personalized Sunnyside alcohol habit change plan" loading="lazy">
-                    </div>
-                    <div class="cta-banner__inner--content">
-                        <h2>Ready to Drink Less or Quit?</h2>
-                        <p>Regardless of your starting point or end goal, we’re here for you. Let’s get started.</p>
-                    </div>
-                    <div class="button-row">
-                        <a href="#" class="btn btn-primary">Start your personalized plan</a>
-                    </div>
+            <div class="cta-banner__inner">
+                <div class="cta-banner__inner--image">
+                    <img src="src/images/home/infobanner2.png" alt="Person starting a personalized Sunnyside alcohol habit change plan" loading="lazy">
+                </div>
+                <div class="cta-banner__inner--content">
+                    <h2>Ready to Drink Less or Quit?</h2>
+                    <p>Regardless of your starting point or end goal, we’re here for you. Let’s get started.</p>
+                </div>
+                <div class="button-row">
+                    <a href="#" class="btn btn-primary">Start your personalized plan</a>
                 </div>
             </div>
-            <div class="d-flex">
-                <div class="cta-banner checkout-blog mb-25">
-                    <div class="cta-banner__inner static">
+        </div>
+    </section>
+    <section class="content-promo-section p-0">
+        <div class="container">
+            <div class="column-wrapper two-col">
+                <div class="content-promo content-promo--blog">
+                    <div class="content-promo__inner">
                         <div>
-                            <div class="cta-banner__inner--content">
+                            <div class="content-promo__inner--content">
                                 <h3>Read the Sunnyside blog for the latest.</h3>
                                 <a href="#" class="btn btn-primary">CHECK OUT THE BLOG</a>
                             </div>
                         </div>
-                        <div class="cta-banner__inner--image">
+                        <div class="content-promo__inner--image">
                             <img src="src/images/about/info-banner2.png" alt="Sunnyside blog illustration" loading="lazy">
                         </div>
-                        
                     </div>
                 </div>
-                <div class="cta-banner podcast mb-25">
-                    <div class="cta-banner__inner static">
+                 <div class="content-promo content-promo--podcast">
+                    <div class="content-promo__inner">
                         <div>
-                            <div class="cta-banner__inner--content">
+                            <div class="content-promo__inner--content">
                                 <h3>Listen to our podcast. New episodes weekly.</h3>
                                 <a href="#" class="btn btn-primary">LISTEN TO THE PODCAST</a>
                             </div>
                         </div>
-                        <div class="cta-banner__inner--image">
+                        <div class="content-promo__inner--image">
                             <img src="src/images/about/info-banner3.png" alt="Sunnyside podcast illustration" loading="lazy">
                         </div>
-                        
                     </div>
                 </div>
             </div>
-             <div class="cta-banner ready-study mb-25">
-                <div class="cta-banner__inner static">
-                    <div>
-                        <div class="cta-banner__inner--content">
-                            <h3>We’ve helped more than 600,000 people on the path to healthier drinking habits.</h3>
-                            <a href="#" class="btn btn-primary">READ THE STUDY</a>
+        </div>
+       
+    </section>
+    <section class="content-promo-section pt-0">
+        <div class="container">
+            <div class="content-promo-grid">
+                <div class="content-promo content-promo--study">
+                    <div class="content-promo__inner">
+                        <div>
+                            <div class="content-promo__inner--content">
+                                <h3>We’ve helped more than 600,000 people on the path to healthier drinking habits.</h3>
+                                <a href="#" class="btn btn-primary">READ THE STUDY</a>
+                            </div>
+                        </div>
+                        <div class="content-promo__inner--image">
+                             <img src="src/images/about/info-banner4.png" alt="Sunnyside research study results" class="img-fluid desktop" loading="lazy">
+                            <img src="src/images/about/info-banner4-responsive.png" alt="Sunnyside research study results" class="img-fluid responsive" loading="lazy">
                         </div>
                     </div>
-                    <div class="cta-banner__inner--image">
-                        <img src="src/images/about/info-banner4.png" alt="Sunnyside research study results" class="img-fluid desktop" loading="lazy">
-                         <img src="src/images/about/info-banner4-responsive.png" alt="Sunnyside research study results" class="img-fluid responsive" loading="lazy">
-                    </div>
-                    
                 </div>
             </div>
         </div>

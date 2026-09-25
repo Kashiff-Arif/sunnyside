@@ -89,7 +89,7 @@ if (isset($innerPages)) {
                         <ul>
                             <li><a href="how-it-works">How it works</a></li>
                             <li><a href="#">Medication</a></li>
-                            <li><a href="#">Results</a></li>
+                            <li><a href="results">Results</a></li>
                             <li><a href="blog">Blog</a></li>
                             <li><a href="about">About</a></li>
                             <li><a href="#">Login</a></li>

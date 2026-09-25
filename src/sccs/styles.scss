@@ -38,6 +38,15 @@
 .mb-16{
     margin-bottom: rem(16px) !important;
 }
+.flex-row-reverse{
+    flex-direction: row-reverse;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
 .mx-auto{
     margin-left:auto;
     margin-right:auto;
@@ -73,6 +82,7 @@ section{
         font-weight:800;
         line-height: 63px;
         max-width:var(--width);
+        margin-bottom: rem(22px);
         
     }
     &__subtitle{
@@ -90,6 +100,7 @@ section{
     }
     &__desc{
         --width:100%;
+        width:100%;
         max-width:var(--width);
         @include push--auto;
         p{
@@ -373,7 +384,7 @@ section{
     }
     .sectionHead{
         &__title{
-            font-size:rem(35px);
+            font-size:rem(32px);
             line-height: 30px;
         }
         &__subtitle{
@@ -407,14 +418,14 @@ section{
     }
     p{
         font-size:rem(16px);
-        line-height:20px !important;
+        line-height:22px !important;
     }
 }
 @media screen and (max-width:667px){
      .sectionHead{
         &__title{
-            font-size:rem(33px);
-            line-height: 31px;
+            font-size:rem(28px);
+            line-height: 30px;
         }
     }
     // .front-page{
@@ -500,3 +511,10 @@ section{
         }
     }
 }
+
+// .border-top{
+//     border-top: 4px solid var(--primary);
+//     @media screen and (max-width:767px){
+//         border-width: 2px;
+//     }
+// }

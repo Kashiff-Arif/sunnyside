@@ -9,7 +9,7 @@ include_once "includes/header.php";
 <!-- Page Wrapper -->
 <main>
     <div class="contentWrapper">
-        <div class="blog-search">
+        <section class="blog-search">
             <div class="container">
                 <div class="d-flex">
                     <h1>The Sunnyside Blog</h1>
@@ -19,11 +19,11 @@ include_once "includes/header.php";
                     </div>
                 </div>
             </div>
-        </div> 
-        <section class="blog-hero">
+        </section> 
+        <section class="featured-post">
             <div class="container">
-                <div class="blog-hero__wrapper">
-                    <div class="blog-hero__left">
+                <div class="featured-post__wrapper">
+                    <div class="featured-post__left">
                         <div class="tags">
                             <div class="tag">JAN 8, 2026</div>
                             <div class="tag">FEATURED POST</div>
@@ -40,8 +40,8 @@ include_once "includes/header.php";
                             </div>
                         </div>
                     </div>
-                    <div class="blog-heror__right">
-                        <div class="blog-hero__right--image">
+                    <div class="featured-post__right">
+                        <div class="featured-post__right--image">
                             <img src="src/images/blog/banner-img.png" alt="Sunnyside mindful drinking blog" loading="lazy">
                         </div>
                     </div>
@@ -82,11 +82,11 @@ include_once "includes/header.php";
                 </div>
             </div>
         </section>
-        <section class="info-banner">
+        <section class="promo-banners">
             <div class="container">
-                <div class="info-banner__wrapper">
-                    <div class="card newsletter">
-                        <div class="card__image">
+                <div class="column-wrapper two-col">
+                    <div class="promo-banner newsletter">
+                        <div class="promo-banner__image">
                             <img src="src/images/blog/newsletter.png"  alt="Sunnyside blog newsletter">
                         </div>
                         <div class="tag">NEWSLETTER</div>
@@ -99,8 +99,8 @@ include_once "includes/header.php";
                             <button type="submit" class="btn btn-primary">Sign Up</button>
                         </div>
                     </div>
-                    <div class="card get-support">
-                        <div class="card__image">
+                    <div class="promo-banner get-support">
+                        <div class="promo-banner__image">
                             <img src="src/images/blog/get-support.png"  alt="Get support from Sunnyside">
                         </div>
                         <div class="tag">get support</div>
@@ -388,10 +388,10 @@ include_once "includes/header.php";
             
         </section>
         <!-- SunnySide Board Members Section -->
-        <section class="board-members clinic-advisor pt-0">
+        <section class="board-members board-members--alt pt-0">
             <div class="container">
                 <div class="board-members__head">
-                    <div class="sectionHead h-size">
+                    <div class="sectionHead">
                         <h2 class="sectionHead__title">OUR CLINICAL ADVISORS</h2>
                     </div>
                     <div>

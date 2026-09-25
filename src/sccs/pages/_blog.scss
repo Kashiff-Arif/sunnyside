@@ -29,16 +29,19 @@
         }
     }
 }
- .info-banner{
-    &__wrapper{
-        display:flex;
-        gap:rem(27px);
-        >div{
-            width:50%;
-
-        }
+.promo-grid {     
+    display: grid;     
+    grid-template-columns: 1fr;     
+     gap:rem(27px);
+} 
+@media screen and (min-width:1201px){
+    .promo-grid:has(> * + *) {     
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
     }
-    .card{
+}
+.promo-banners{
+    .promo-banner{
+     $self: &;
         padding:rem(40px) rem(55px);
         background-color: #0070BC;
         border-radius: 20px;
@@ -92,24 +95,22 @@
         }
         &.newsletter{
             padding-right:rem(100px);
-            .card{
-                &__image{
+            .promo-banner__image{
+                width:100%;
+                height:100%;
+                img{
                     width:100%;
                     height:100%;
-                    img{
-                        width:100%;
-                        height:100%;
-                        object-fit: cover;
-                    }
-                    &:after{
-                        content:"";
-                        position: absolute;
-                        width:100%;
-                        height:100%;
-                        background: linear-gradient(270deg, rgba(165, 208, 75, 0.8) -9.36%, #A5D04B 99.13%);
-                        left:0;
-                        top:0;
-                    }
+                    object-fit: cover;
+                }
+                &:after{
+                    content:"";
+                    position: absolute;
+                    width:100%;
+                    height:100%;
+                    background: linear-gradient(270deg, rgba(165, 208, 75, 0.8) -9.36%, #A5D04B 99.13%);
+                    left:0;
+                    top:0;
                 }
             }
             h2{
@@ -125,6 +126,7 @@
         }
     }
 }
+
  .search{ 
     display:flex;
     align-items: center;
@@ -150,7 +152,7 @@
         }
     }
     .btn{
-        width:125px;
+        min-width:125px;
         height:43px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
@@ -165,36 +167,7 @@
         }
     }
 }
-.clinic-advisor{
-    &.board-members{
-        
-        .sectionHead{
-            max-width:100%;
-            &__title{
-                margin-bottom: rem(25px) !important;
-            }
-            +div{
-                display:flex;
-                justify-content: space-between;
-                p{
-                    font-size:16px;
-                    font-weight:500;
-                    line-height: 26px;
-                    margin:0;
-                    max-width:790px;
-                    flex:1;
-                }
-            }
-        }
-        .board-members{
-            &__head{
-                display:block;
-                padding-bottom:rem(60px);
-            }
-        }
-    }
-}
-.blog-hero{
+.featured-post{
     .tags{
             display: flex;
             align-items: center;
@@ -598,8 +571,8 @@
     &__image{
         margin-bottom: rem(32px);
     }
-    .info-banner{
-        .card{
+    .promo-banners{
+        .promo-banner{
             height:300px;
             padding:rem(30px) rem(35px);
             border-radius: 25px;
@@ -718,14 +691,14 @@
     }
     @media screen and (min-width:1201px){
         .latest-posts{
-        &__items{
-            display: flex;
-            flex-wrap: wrap;
-            >div{
-                width:50%;
+            &__items{
+                display: flex;
+                flex-wrap: wrap;
+                >div{
+                    width:50%;
+                }
             }
         }
-    }
     }
 }
 
@@ -733,29 +706,8 @@
 
 
 @media screen and (max-width:1200px){
-    .clinic-advisor{
-        
-        &.board-members{
-            .sectionHead{
-                +div{
-                    flex-direction: column;
-                    p{
-                        max-width:100%;
-                    }
-                }
-                
-            }
-            .board-members{
-                &__head {
-                    ul{
-                        justify-content: start;
-                        margin-top:rem(25px);
-                    }
-                }
-            }
-        }
-    }
-    .blog-hero{
+
+    .featured-post{
         .sectionHead{
             &__title{
                 font-size:rem(40px);
@@ -771,14 +723,14 @@
             }
         }
     }
-    .info-banner{
-        .card{
+    .promo-banners{
+        .promo-banner{
             padding-left:rem(30px);
             h2{
                 font-size:rem(32px);
                 line-height: 36px;
             }
-        }
+        }   
     }
 }
 @media screen and (max-width:991px){
@@ -788,7 +740,7 @@
             font-size:rem(40px);
          }
     }
-    .blog-hero{
+    .featured-post{
         &__wrapper{
             flex-direction: column-reverse;
             gap:35px;
@@ -797,30 +749,21 @@
             }
         }
     }
-     .info-banner{
-        &__wrapper{
-            flex-direction: column;
-            >div{
-                width:100%;
+    .promo-banner{
+        $self: &;
+        &.get-support{
+            .promo-banner__image{
+                img{
+                    max-width:300px;
+                }
             }
         }
-        .card{
-            &.get-support{
-                .card{
-                    &__image{
-                        img{
-                            max-width:300px;
-                        }
-                    }
-                }
-            }
-            &.newsletter{
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                .tag{
-                    width:123px;
-                }
+        &.newsletter{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            .tag{
+                width:123px;
             }
         }
     }
@@ -906,6 +849,7 @@
         .search{
             max-width: 250px;
             .btn{
+                min-width:50px;
                 width:50px;
                 font-size: 0;
                 background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.04004 14.4198C7.04008 10.8993 9.52703 7.86915 12.9799 7.18246C16.4328 6.49578 19.89 8.34388 21.2369 11.5965C22.584 14.8492 21.4457 18.6003 18.5183 20.5559C15.591 22.5115 11.6897 22.1268 9.20068 19.6371C7.8172 18.2533 7.04001 16.3766 7.04004 14.4198Z' stroke='white' stroke-width='1.92' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.7969 21.7978L24.9598 24.9606' stroke='white' stroke-width='1.92' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
@@ -915,19 +859,7 @@
             }
         }
     }
-    .clinic-advisor{
-        
-        .board-members{
-            .sectionHead{
-                +div{
-                    p{
-                        font-size:14px;
-                    }
-                }
-            }
-        }
-    }
-    .blog-hero{
+    .featured-post{
         .sectionHead{
             &__title{
                 font-size:22px;
@@ -1053,9 +985,14 @@
                 padding-left:20px;
              }
         }
-        .info-banner{
-             .card{
+        .promo-banners{
+             .promo-banner{
                 min-height: 420px;
+                .search{
+                    .btn{
+                        min-width: 90px;
+                    }
+                }
              }
         }
         &__meta{
@@ -1170,10 +1107,20 @@
             }
         }
     }
+    .promo-banners{
+        .promo-banner{
+            .search{
+                .btn{
+                    min-width: 95px;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width:667px){
-    .info-banner{
-        .card{
+    .promo-banners{
+        .promo-banner{
+            $self: &;
             min-height:500px;
             padding-left:22px;
             padding-right:22px;
@@ -1187,23 +1134,21 @@
             }
             &.get-support{
                 padding-right:60px;
-                .card{
-                    &__image{
-                        img{
-                            max-width:250px;
-                        }
+                .promo-banner__image{
+                    img{
+                        max-width:250px;
                     }
                 }
             }
             &.newsletter{
                 padding-right:22px;
             }
-        }
+        }   
     }
 }
 @media screen and (max-width:400px){
-    .info-banner{
-        .card{
+    .promo-banners{
+        .promo-banner{
             h2{
                 font-size:25px;
                 line-height: 30px;
@@ -1211,6 +1156,6 @@
             &.get-support{
                 padding-right:50px;
             }
-        }
+        } 
     }
 }

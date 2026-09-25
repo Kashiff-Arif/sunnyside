@@ -120,9 +120,9 @@ include_once "includes/header.php";
                 <p>
                     Studies have shown that nearly half of adults who drink want to cut back, but not quit entirely. They want an alternative to “either/or.” Enter mindful drinking, a movement that rests comfortably in the in-between for those who wish to proactively live a healthier lifestyle without completely giving up the beverages they enjoy. In recent years, the term “sober curiosity” has been referred to more broadly as mindful drinking, which simply means actively tracking and managing drinking as another way to care about your health, just like you do when you count calories and track your steps. It’s a proactive—rather than reactive—approach to managing your relationship with alcohol.
                 </p>
-                <div class="info-banner">
-                    <div class="card newsletter">
-                        <div class="card__image">
+                <div class="promo-banners">
+                    <div class="promo-banner newsletter">
+                        <div class="promo-banner__image">
                             <img src="src/images/blog/newsletter.png" alt="Sunnyside mindful drinking newsletter">
                         </div>
                         <div class="tag">NEWSLETTER</div>

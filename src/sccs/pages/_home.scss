@@ -27,14 +27,18 @@
         height: 79dvh;
         // height:60vh;
         justify-content: space-between;
+        
         @media screen and (min-width:1401px){
-            min-height:570px;
+            min-height:630px;
         }
         @media screen and (min-width:2100px){
             min-height:750px;
         }
         @media screen and (max-width:1400px) and (min-width:1201px){
-            min-height:470px;
+            min-height:550px;
+        }
+        @media screen and  (min-height: 951px) {
+             height:50dvh;
         }
     }
     &__left{
@@ -138,7 +142,7 @@
         font-size:rem(78px);
         font-weight:900;
         line-height: 88px;
-        max-width:940px;
+        max-width:840px;
     }
     p{
         font-size:rem(23px);
@@ -152,7 +156,12 @@
     }
     @media screen and (max-width:1720px){
         &__left{
-            padding-left:30px;
+            padding-left:100px;
+        }
+        h1{
+            font-size: rem(70px);
+            line-height: 76px;
+            max-width: 800px;
         }
     }
     @media screen and (max-width:1600px){
@@ -161,6 +170,7 @@
         // }
         &__left{
             padding:rem(30px);
+            padding-left:rem(80px);
             width:62%;
         }
         &__right{
@@ -179,6 +189,7 @@
         h1{
             font-size:rem(58px);
             line-height: 52px;
+            max-width: 590px;
         }
         //  &__left{
         //     width:50%;
@@ -190,7 +201,7 @@
     @media screen and (max-width:1200px){
        margin-bottom: rem(40px);
         &__left{
-            padding:rem(20px) rem(16px);
+            padding:rem(30px);
             padding-bottom:40px;
             // position: absolute;
             width:100%;
@@ -461,6 +472,18 @@
             .tag{
                 background-color:#FFD737;
                 color:#000;
+            }
+        }
+        &.yellow{
+            .tag{
+                background-color:#FFD737;
+                color:#000;
+            }
+        }
+        &.blue{
+            .tag{
+                background-color:#0070BC;
+                color:#fff;
             }
         }
     }
@@ -1815,6 +1838,7 @@
     }
 }
 .board-members{
+     $self: &;
     &__head{
         display:flex;
         align-items: center;
@@ -1942,6 +1966,43 @@
         //     display:none;
         // }
     }
+    &.board-members--alt{
+        padding-top:0;
+        .separator{
+            display:none;
+        }
+         .sectionHead{
+            max-width:100%;
+            &__title{
+                margin-bottom: rem(25px) !important;
+                font-size:rem(22px);
+                line-height: 63px;
+                border-bottom: 1px solid #E5E5E5;
+                margin-bottom: rem(45px);
+                font-weight:800;
+                @media screen and (max-width:767px){
+                    font-size:16px;
+                    line-height: 46px;
+                }
+            }
+            +div{
+                display:flex;
+                justify-content: space-between;
+                p{
+                    font-size:16px;
+                    font-weight:500;
+                    line-height: 26px;
+                    margin:0;
+                    max-width:790px;
+                    flex:1;
+                }
+            }
+        }
+        #{$self}__head{
+            display:block;
+            padding-bottom:rem(60px);
+        }
+    }
     @media screen and (max-width:1600px){
         .swiper-button{
             &.swiper-button-next{
@@ -1949,6 +2010,25 @@
             }
             &.swiper-button-prev{
                 left:11px !important;
+            }
+        }
+    }
+    @media screen and (max-width:1200px){
+        &.board-members--alt{
+            .sectionHead{
+                +div{
+                    flex-direction: column;
+                    p{
+                        max-width:100%;
+                    }
+                }
+                
+            }
+           #{$self}__head {
+                ul{
+                    justify-content: start;
+                    margin-top:rem(25px);
+                }
             }
         }
     }
@@ -1968,6 +2048,18 @@
             }
         }
     }
+    @media screen and (max-width:767px){
+        &.board-members--alt{
+            .sectionHead{
+                +div{
+                    p{
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+    }
+    
     
 }
 .testimonials{
