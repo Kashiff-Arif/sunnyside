@@ -4,6 +4,22 @@
     width:100%;
     left:0;
     transition: .5s ease all;
+    .breadcrumb{
+        margin:0;
+        li{
+            font-size:27px !important;
+            text-transform: capitalize;
+            font-family: $primary-font;
+            a{
+                font-size:27px;
+                font-weight:900;
+                color:#000;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
     .d-flex{
         align-items: center;
         justify-content: space-between;
@@ -25,6 +41,14 @@
             padding:rem(15px) 0;
             h1{
                 font-size:rem(30px);
+            }
+             .breadcrumb{
+                li{
+                    font-size:20px !important;
+                    a{
+                        font-size:20px;
+                    }
+                }
             }
         }
     }
@@ -327,6 +351,23 @@
             }
         }
     }
+    &.all-posts{
+        padding-bottom:0;
+        .separator{
+            padding-top:40px;
+        }
+        .latest-posts{
+            &__items{
+                @media (min-width:1201px){
+                    display: flex;
+                    flex-wrap: wrap;
+                    >div{
+                        width:50%;
+                    }
+                }
+            }
+        }
+    }
 }
 .latest-podcast{
     .d-flex{
@@ -521,21 +562,21 @@
         }
     }
     &__content{
-        h3{
+        h2{
             font-size:rem(45px);
             line-height: 62px;
             font-weight:800;
             margin-bottom: 20px;
         }
-        h4{
+        h3{
             font-size:rem(35px);
             line-height: 42px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
-        h5{
+        h4{
             font-size:rem(26px);
-            line-height: 42px;
-            margin-bottom: 16px;
+            line-height: 35px;
+            margin-bottom: 10px;
         }
         p{
             font-weight:500;
@@ -732,6 +773,16 @@
             }
         }   
     }
+    .blog-search{
+        .breadcrumb{
+            li{
+                font-size:24px !important;
+                a{
+                    font-size:24px;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width:991px){
     .blog-search{
@@ -739,6 +790,14 @@
          h1{
             font-size:rem(40px);
          }
+         .breadcrumb{
+            li{
+                font-size:18px !important;
+                a{
+                    font-size:18px;
+                }
+            }
+        }
     }
     .featured-post{
         &__wrapper{
@@ -813,11 +872,11 @@
             line-height: 55px;
         }
         &__content{
-             h3{
+             h2{
                 font-size:rem(35px);
                 line-height: 45px;
              }
-             h4{
+             h3{
                 font-size:rem(30px);
                 line-height: 30px;
              }
@@ -858,6 +917,7 @@
                 background-position: center;
             }
         }
+        
     }
     .featured-post{
         .sectionHead{
@@ -957,26 +1017,23 @@
             font-size: 15px;
             line-height: 23px !important;
         }
-        &__title{
+        &__title{ 
             font-size:rem(32px);
             line-height: 36px;
         }
         &__content{
-             h3{
+             h2{
                 font-size:26px;
                 line-height: 35px;
-                font-weight:900;
                 margin-bottom: 10px;
+             }
+             h3{
+                font-size:22px;
+                line-height: 30px;
              }
              h4{
-                font-size:22px;
-                line-height: 32px;
-                margin-bottom: 10px;
-             }
-             h5{
                 font-size:18px;
-                line-height: 28px;
-                margin-bottom: 10px;
+                line-height: 24px;
              }
              p{
                 margin-bottom: rem(18px);
