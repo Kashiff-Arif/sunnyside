@@ -656,3 +656,25 @@ section{
 //         border-width: 2px;
 //     }
 // }
+
+.s-hero-404{
+    padding-top:rem(150px);
+    padding-bottom: 100px;
+    text-align: center;
+    h2{
+        font-size:rem(30px);
+    }
+}
+
+.maxbutton{
+    background-color: #000 !important;
+    border-color:#000 !important;
+    border:1px solid #000 !important;
+    &:hover{
+        color:#000 !important;
+        background-color: transparent !important;
+    }
+}
+.maxbutton:hover .mb-text{
+    color: #000 !important;
+}

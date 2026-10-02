@@ -427,7 +427,7 @@ include_once "includes/header.php";?>
             </div>
         </div>
     </section>
-    <section class="cta-banner p-0 ">
+    <section class="cta-banner pb-0 pt-20 ">
         <div class="container">
             <div class="cta-banner__inner">
                 <div class="cta-banner__inner--image">
@@ -443,7 +443,7 @@ include_once "includes/header.php";?>
             </div>
         </div>
     </section>
-    <section class="content-promo-section p-0">
+    <section class="content-promo-section pb-0 pt-20">
         <div class="container">
             <div class="column-wrapper two-col">
                 <div class="content-promo content-promo--blog">
@@ -476,7 +476,7 @@ include_once "includes/header.php";?>
         </div>
        
     </section>
-    <section class="content-promo-section pt-0">
+    <section class="content-promo-section pb-0 pt-20">
         <div class="container">
             <div class="content-promo-grid">
                 <div class="content-promo content-promo--study">

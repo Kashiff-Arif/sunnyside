@@ -87,10 +87,16 @@
     }
     &__desc{
         p{
-            font-weight:500;
+            font-weight:300;
             font-size: rem(16.73px);
             line-height: 27px;
             margin:0;
+            a{
+                text-decoration: underline;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
             &:not(:last-child){
                 margin-bottom:rem(30px);
             }

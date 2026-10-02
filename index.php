@@ -44,7 +44,7 @@ include_once "includes/header.php";
                     </div>
                     <div class="hero__right">
                         <div class="hero__right--image">
-                            <img src="src/images/home/hero-img.webp" alt="Sunnyside alcohol habit change program on a smartphone" loading="lazy">
+                            <img src="src/images/home/hero-img2.png" alt="Sunnyside alcohol habit change program on a smartphone" loading="lazy">
                             <!-- For Responsive -->
                             <img src="src/images/home/hero-img-responsive.webp" alt="Sunnyside alcohol habit change program on a smartphone" class="img-fluid responsive-img d-none" loading="lazy">
                         </div>

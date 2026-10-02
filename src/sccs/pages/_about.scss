@@ -67,9 +67,11 @@
     &:before{
         content:"";
         position: absolute;
-        background:url(../images/about/circle-bg.svg) center center no-repeat;
+        // background:url(../images/about/circle-bg.svg) center center no-repeat;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='1464' height='636' viewBox='0 0 1464 636' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='88.5' cy='547.5' r='88.5' fill='%237B5CDA'/%3E%3Ccircle cx='287' cy='335' r='66.5' stroke='%239173EB'/%3E%3Ccircle cx='167' cy='54' r='42' fill='%235C3CBB'/%3E%3Ccircle cx='1312.5' cy='74.5' r='74.5' fill='%238667E0'/%3E%3Ccircle cx='1429.5' cy='319.5' r='34.5' fill='%235F3DC4'/%3E%3Ccircle cx='1183' cy='547' r='49.5' stroke='%238163DA'/%3E%3C/svg%3E%0A");
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: center;
         width:100%;
         height:635px;
         z-index:-1;
@@ -334,10 +336,15 @@
         margin-bottom:rem(80px);
         &__image{
             margin-bottom: rem(27px);
+             height: 343px;
             img{
                 border-radius: 20px;
                 overflow: hidden;
-                max-height: 343px;
+                width:100%;
+                height:100%;
+                object-fit: cover;
+                contain-intrinsic-size: unset !important;
+               
             }
         }
         &__detail{
@@ -427,7 +434,7 @@
     }
 }
 .meet-cofounders{
-    padding-bottom:rem(36px) !important;
+    padding-bottom: 2.25rem !important;
     &__inner{
         background-color: var(--primary);
         border-radius: 20px;
@@ -448,9 +455,18 @@
         justify-content: center;
         gap:12px;
         img{
-            // max-height:360px;
+            max-height:360px;
             border-radius: 20px;
             overflow: hidden;
+                 contain-intrinsic-size: unset !important;
+        }
+        >div{
+            &:first-child{
+                max-width: 490px;
+            }
+            &:last-child{
+                max-width: 276px;
+            }
         }
     }
     p{
@@ -507,6 +523,9 @@
             }
         }
     }
+}
+.meet-cofounders + .cta-banner .separator {
+    display: none !important;
 }
 // .info-banners{
 //     .cta-banner{
@@ -748,7 +767,7 @@
 .column-wrapper{
     display: grid;     
     gap: 30px;
-    margin-top:25px;
+    // margin-top:25px;
     &.two-col{
         @media screen and (min-width:1201px){
              grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -856,6 +875,13 @@
         }
     }
     &--study{
+        margin-bottom:rem(90px);
+        @media screen and (max-width:1600px){
+             margin-bottom:rem(75px);
+        }
+        @media screen and (max-width:991px){
+             margin-bottom:rem(60px);
+        }
         .content-promo{
             &__inner{
                 background: #FFD737;
@@ -929,7 +955,7 @@
                         flex:0 0 160px;
                         top:14px;
                         img{
-                            &.desktop{
+                            &.desktop , &.attachment-full{
                                 display:none;
                             }
                             &.responsive{
@@ -981,6 +1007,8 @@
         &--study{
             .content-promo{
                 &__inner{
+                    padding-inline-start: 18px;
+                    padding-right: 18px;
                     &--image{
                         width: 115px;
                         flex: 0 0 115px;
@@ -989,7 +1017,28 @@
                 }
             }
         }
+        &--blog{
+            .content-promo{
+                &__inner{
+                    padding-inline-start: 18px;
+                    
+                    &--image{
+                        width: 106px;
+                        flex: 0 0 106px;
+                    }
+                }
+            }
+        }
+        &--podcast{
+            .content-promo{
+                &__inner{
+                    padding-inline-start: 18px;
+                    padding-inline-end: 18px;
+                }
+            }
+        }
     }
 }
+
 
 

@@ -374,21 +374,26 @@ include_once "includes/header.php";
                         </div>
                             <!-- item4 -->
                         <div class="protocols__item craving-management" style="--bg:#1E92DA">
-                            <div class="protocols__item--icon">
-                                <img src="src/images/how-works/XMLID.svg" alt="Medication support for alcohol cravings" >
+                            <div class="protocols__item--image">
+                                <img src="src/images/home/approch-img2.webp" alt="Medication adherence" >
                             </div>
-                            <div class="protocols__item--content">
-                                <h3>
-                                    <span> Craving Management</span>
-                                    Medication adherence
-                                </h3>
-                                <p>
-                                    If your program includes medication, take it one hour before cravings typically hit, every day. 
-                                </p>
-                                <ul>
-                                    <li><div class="icon"><img src="src/images/how-works/icon1.svg" alt="Brain-level craving assistance principle"></div><p><span>Principle:</span> Brain-leve assistance with cravings</p></li>
-                                    <li><div class="icon"><img src="src/images/how-works/icon2.svg" alt="Reduced rewarding effects of alcohol"></div><p><span>Effect:</span>  Reduces alcohol’s rewarding effects</p></li>
-                                </ul>
+                            <div class="protocols__item--wrapper">
+                                <div class="protocols__item--icon">
+                                    <img src="src/images/how-works/XMLID.svg" alt="Medication support for alcohol cravings" >
+                                </div>
+                                <div class="protocols__item--content">
+                                    <h3>
+                                        <span> Craving Management</span>
+                                        Medication adherence
+                                    </h3>
+                                    <p>
+                                        If your program includes medication, take it one hour before cravings typically hit, every day. 
+                                    </p>
+                                    <ul>
+                                        <li><div class="icon"><img src="src/images/how-works/icon1.svg" alt="Brain-level craving assistance principle"></div><p><span>Principle:</span> Brain-leve assistance with cravings</p></li>
+                                        <li><div class="icon"><img src="src/images/how-works/icon2.svg" alt="Reduced rewarding effects of alcohol"></div><p><span>Effect:</span>  Reduces alcohol’s rewarding effects</p></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <!-- item5 -->
@@ -454,7 +459,7 @@ include_once "includes/header.php";
                 </div>
             </div>
             <div class="progress__card--right big-layout">
-                <img src="src/images/how-works/progress-img1.png" alt="Sunnyside progress tracking screen" loading="lazy">
+                <img src="src/images/how-works/progress-img1-2.png" alt="Sunnyside progress tracking screen" loading="lazy">
                 <img src="src/images/how-works/progress-img-responisve.png" alt="Sunnyside progress tracking screen" class="img-fluid img-responsive" loading="lazy">
             </div>
         </div>
