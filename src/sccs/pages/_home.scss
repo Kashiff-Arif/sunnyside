@@ -25,20 +25,19 @@
         border-radius: 20px;
         overflow: hidden;
         height: 79dvh;
+        max-height:1040px;
         // height:60vh;
         justify-content: space-between;
         
         @media screen and (min-width:1401px){
-            min-height:630px;
-        }
-        @media screen and (min-width:2100px){
             min-height:750px;
         }
         @media screen and (max-width:1400px) and (min-width:1201px){
             min-height:550px;
+            height: 68dvh;
         }
         @media screen and  (min-height: 951px) {
-             height:50dvh;
+             height:74dvh;
         }
     }
     &__left{
@@ -86,27 +85,34 @@
                     position: absolute;
                     inset: 0;
                     pointer-events: none;
-                   background: radial-gradient(
-                    ellipse calc(var(--curve-rx) + 2%) var(--curve-ry)
-                    at calc(var(--curve-cx) + 4%) 50%,
-                    transparent 97.5%,
-                    var(--primary) 97.5% 97.9%,
-                    transparent 98%
+                //    background: radial-gradient(
+                //     ellipse calc(var(--curve-rx) + 2%) var(--curve-ry)
+                //     at calc(var(--curve-cx) + 4%) 50%,
+                //     transparent 97.5%,
+                //     var(--primary) 97.5% 97.9%,
+                //     transparent 98%
+                //     );
+                    background: radial-gradient(
+                        ellipse calc(var(--curve-rx) + 2%) var(--curve-ry)
+                        at calc(var(--curve-cx) + 4%) 50%,
+                        transparent 0%,
+                        transparent 96.65%,
+                        color-mix(in srgb, var(--primary) 30%, transparent) 96.72%,
+                        var(--primary) 96.78%,
+                        var(--primary) 97.12%,
+                        color-mix(in srgb, var(--primary) 30%, transparent) 97.18%,
+                        transparent 97.25%
                     );
                     @media screen and (min-width:1601px){
-                        --curve-rx: 37%;
+                        --curve-rx: 37.5%;
                         --curve-ry: 107%;
                         --curve-cx: 90%;
                     }
                     @media screen and (max-width:1600px){
-                       --curve-rx: 39%;
+                       --curve-rx: 39.5%;
                         --curve-ry: 85%;
                         --curve-cx: 93.5%;
                     }
-                    // @media screen and (max-width:1400px){
-                    //     --curve-rx: 24.5%;
-                    //     --curve-ry: 95%;
-                    // }
                 }
                 
             }
@@ -121,7 +127,7 @@
                     mask-image: radial-gradient(ellipse var(--curve-rx) var(--curve-ry) at var(--curve-cx) 50%, #000 calc(100% - 1px), transparent 100%);
                     -webkit-mask-repeat: no-repeat;
                     mask-repeat: no-repeat;
-                    object-position: left;
+                    object-position: top;
                 }
             }
          }
@@ -155,9 +161,17 @@
         font-weight:900;
         line-height: 63px;
         max-width:840px;
-        @media screen and (min-width:1601px){
-            font-size:rem(84px);
-            line-height: 85px;;
+        @media screen and (min-width:1401px){
+            font-size:rem(75px);
+            line-height: 75px;
+            // @media screen and (max-width:1720px){
+            //     font-size:rem(75px);
+            //     line-height: 75px;
+            // }
+            @media screen and (max-width:1601px){
+                font-size:rem(68px);
+                line-height: 68px;
+            }
         }
     }
     p{
@@ -174,10 +188,10 @@
         &__left{
             padding-left:70px;
         }
-        h1{
-            font-size: rem(60px);
-            line-height: 70px;
-        }
+        // h1{
+        //     font-size: rem(60px);
+        //     line-height: 70px;
+        // }
     }
     @media screen and (max-width:1600px){
         // &__inner{
@@ -202,7 +216,7 @@
     }
     @media screen and (max-width:1400px){
         h1{
-            font-size:rem(45px);
+            font-size:rem(51px);
             line-height: 50px;
             // font-size:rem(58px);
             // line-height: 52px;
@@ -312,7 +326,8 @@
          &__right{
             &--image{
                 img{
-                    height:260px;
+                    height:220px;
+                    object-position: center;
                 }
             }
         }
@@ -478,10 +493,13 @@
             position: relative;
             z-index:1;
             text-align: center;
+            a{
+                opacity:1 !important;
+            }
             img{
                 width:auto;
-                max-height: 293px;
                 max-height:280px;
+                contain-intrinsic-size: revert !important;
             }
         }
         .button-row{

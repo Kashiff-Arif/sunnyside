@@ -159,19 +159,18 @@
             }
         }
     }
+    &__logo{
+        max-width:200px;
+    }
     @media screen and (max-width:991px){
         padding-top:rem(35px);
         &__logo{
-            img{
-                max-width:170px;
-            }
+            max-width:170px;
         }
     }
     @media screen and (max-width:767px){
         &__logo{
-            img{
-                max-width:140px;
-            }
+            max-width:120px;
         }
         .logo{
             img{

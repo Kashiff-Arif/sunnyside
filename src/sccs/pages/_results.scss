@@ -63,6 +63,7 @@
             left:0;
             top:0;
             z-index:1;
+            transition: .4s ease all;
         }
         .play{
             background: var(--primary);
@@ -113,6 +114,13 @@
                 text-transform: uppercase;
             }
         }
+        @media screen and (min-width:1025px){
+            &:hover{
+                &::before{
+                    opacity: 30%;
+                }
+            }
+        }
     }
     .trustpilot{
          &__brand {
@@ -144,9 +152,9 @@
     }
 
     &__trustpilot {
-        display: flex;
-        align-items: center;
-        gap: 12px;
+        // display: flex;
+        // align-items: center;
+        // gap: 12px;
         width: fit-content;
         padding: 9px 18px;
         background-color: #fff;
@@ -340,9 +348,13 @@
         max-width: 600px;
         margin-bottom: 45px;
         &__title{
-            @media screen and (min-width:991px){
-                line-height: 58px;
+            @media screen and (min-width:768px){
+                font-size:rem(32px);
+                line-height: 40px;
             }
+            // @media screen and (min-width:991px){
+            //     line-height: 58px;
+            // }
             span{
                 color:#0070BC;
             }
@@ -480,6 +492,14 @@
             left:0;
             top:0;
             z-index:1;
+            transition: .4s ease all;
+        }
+        @media screen and (min-width:1025px){
+            &:hover{
+                &::before{
+                    opacity: 30%;
+                }
+            }
         }
     }
 
@@ -599,6 +619,12 @@
     }
     .sectionHead{
         text-align: center;
+        &__title{
+            @media screen and (min-width:768px){
+                font-size:rem(32px);
+                line-height: 40px;
+            }
+        }
     }
     &__content{
         display: grid;
@@ -756,6 +782,14 @@
 
 
 .results-stories{
+    .sectionHead{
+        &__title{
+            @media screen and (min-width:768px){
+                font-size:rem(32px);
+                line-height: 40px;
+            }
+        }
+    }
     &__grid{
         display:grid;
         gap:20px;
@@ -862,6 +896,14 @@
 
 .results-outcomes{
     padding-top:0;
+    .sectionHead{
+        &__title{
+            @media screen and (min-width:768px){
+                font-size:rem(32px);
+                line-height: 40px;
+            }
+        }
+    }
     &__grid{
         display:grid;
         grid-template-columns: repeat(4, 1fr);
@@ -1155,6 +1197,10 @@
 .results-podcast{
     .sectionHead{
         &__title{
+            @media screen and (min-width:768px){
+                font-size:rem(32px);
+                line-height: 40px;
+            }
             span{
                 display:block;
                 color:#1283CF;
@@ -1351,6 +1397,12 @@
         @include push--auto;
         &__title , p{
             color:#fff;
+        }
+        &__title{
+            @media screen and (min-width:768px){
+                font-size:rem(32px);
+                line-height: 40px;
+            }
         }
     }
     &__grid{

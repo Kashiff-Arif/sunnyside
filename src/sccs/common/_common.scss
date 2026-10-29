@@ -287,18 +287,28 @@ $data-gap-list: 0, 2, 3, 5, 6, 7, 8, 9, 10, 12, 15, 17, 18, 19, 20, 21, 22, 25, 
     position: relative;
     z-index: 2;
 
-    width: 100%;
-    max-width: 1000px;
+    // width: 100%;
+    // max-width: 1000px; 
+    width: fit-content;
+    max-width: 90vw;
+    max-height: 80vh;
 }
 
 .video-modal__video {
-    display: block;
+    // display: block;
 
-    width: 100%;
+    // width: 100%;
+    // height: auto;
+    // max-height: 80vh;
+
+    // background: #000;
+       display: block;
+    width: auto;
     height: auto;
+    max-width: 90vw;
     max-height: 80vh;
-
-    background: #000;
+    object-fit: contain;
+    background: transparent;
 }
 
 .video-modal__close {

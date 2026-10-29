@@ -7,8 +7,8 @@
     h1{
         font-size: 64px;
         font-weight: 900;
-        line-height: 42px;
-        margin-bottom:rem(40px);
+        line-height: 74px;
+        margin-bottom:rem(30px);
     }
     p{
         font-size:18px;
@@ -170,8 +170,8 @@
     .simple-header{
         h1{
             font-size:50px;
-            line-height: 35px;
-             margin-bottom:rem(25px);
+            line-height: 62px;
+             margin-bottom:rem(18px);
         }
     }
     .simple-content{
@@ -205,7 +205,7 @@
     .simple-header{
         h1{
             font-size:40px;
-            line-height: 35px;
+            line-height: 50px;
         }
         p{
             font-size:16px;
@@ -246,8 +246,8 @@
 @media screen and (max-width:575px){
     .simple-header{
         h1{
-            font-size:35px;
-            line-height: 30px;
+            font-size:33px;
+            line-height: 36px;
         }
     }
     .simple-content{

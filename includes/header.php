@@ -85,23 +85,130 @@ if (isset($innerPages)) {
                         <a href="index.php"><img src="src/images/logo.svg" alt="Sunnyside" class="img-fluid"></a>
                     </div>
                     <!-- Nav Links -->
-                    <nav id="site-navigation" aria-label="Primary navigation">
-                        <ul>
-                            <li><a href="how-it-works">How it works</a></li>
-                            <li><a href="#">Medication</a></li>
-                            <li><a href="results">Results</a></li>
-                            <li><a href="blog">Blog</a></li>
-                            <li><a href="about">About</a></li>
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#" class="btn btn-dafult">Get started</a></li>
-                        </ul>
-                    </nav>
-                    <!-- Responsive Menu Icon -->
-                    <button type="button" class="header__menuIcon" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                    <div class="header__right">
+                        <nav id="site-navigation" aria-label="Primary navigation">
+                            <ul>
+                                <li><a href="how-it-works">How it works</a></li>
+                                <li><a href="#">Medication</a></li>
+                                <li><a href="results">Results</a></li>
+                                <li class="has-mega">
+                                    <button type="button" class="mega-toggle" aria-expanded="false" aria-controls="mega-resources">
+                                    Resources <span class="chev" aria-hidden="true"></span>
+                                    </button>
+
+                                    <div class="mega-menu" id="mega-resources">
+                                        <div class="container">
+                                            <div class="mega-inner">
+                                                <!-- <button type="button" class="mega-back">&larr; Back</button> -->
+                                                <!-- Latest blog post -->
+                                                <div class="mega-col mega-blog">
+                                                    
+                                                    <div class="mega-blog-body">
+                                                        <div>
+                                                            <span class="mega-label">Latest blog post</span>
+                                                            <div class="mega-blog-text">
+                                                                <h4>Can Naltrexone Help With Stress Drinking? What the Research Shows</h4>
+                                                                <div class="button-row for-desktop">
+                                                                    <a href="#" class="btn-pill btn-pill--dark">Read the post</a>
+                                                                    <a href="#" class="btn-pill btn-pill--outline">Explore the blog</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <img src="src/images/blog-thumb.webp" alt="" class="mega-blog-img">
+                                                        <div class="button-row for-responsive">
+                                                            <a href="#" class="btn-pill btn-pill--dark">Read the post</a>
+                                                            <a href="#" class="btn-pill btn-pill--outline">Explore the blog</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Guides -->
+                                                <div class="mega-col">
+                                                    <span class="mega-label">Guides</span>
+                                                    <ul class="mega-links mega-links--yellow">
+                                                        <li><a href="#"><span>Naltrexone 101</span></a></li>
+                                                        <li><a href="#"><span>Mindful Drinking 101</span></a></li>
+                                                        <li><a href="#"><span>Naltrexone Side Effects</span></a></li>
+                                                        <li><a href="#"><span>Hangxiety 101</span></a></li>
+                                                    </ul>
+                                                </div>
+
+                                                <!-- Resources & tools -->
+                                                <div class="mega-col">
+                                                    <span class="mega-label">Resources &amp; tools</span>
+                                                    <ul class="mega-links mega-links--blue">
+                                                        <li><a href="#"><span>Blog</span></a></li>
+                                                        <li><a href="#"><span>Podcast</span></a></li>
+                                                        <li><a href="#"><span>Youtube Channel</span></a></li>
+                                                        <li><a href="#"><span>Instagram Account</span></a></li>
+                                                    </ul>
+                                                </div>
+
+                                                <!-- Quiz card -->
+                                                <a href="" class="mega-quiz">
+                                                    <img src="src/images/mega-quiz.webp" alt="Am I Drinking Too Much?">
+                                                    <span class="mega-quiz-tag">Quiz</span>
+                                                    <strong>Am I Drinking Too Much?</strong>
+                                                    <span class="btn-pill btn-pill--yellow">Take the quiz</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="about">About</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </nav>
+                        <!-- Get Started Button -->
+                        <div class="button-row">
+                            <a href="#" class="btn btn-dafult">Get started</a>
+                        </div>
+                        <!-- Responsive Menu Icon -->
+                        <button type="button" class="header__menuIcon" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </header>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const nav      = document.querySelector('.header nav');
+            const item     = nav.querySelector('.has-mega');
+            const toggle   = item.querySelector('.mega-toggle');
+            // const backBtn  = item.querySelector('.mega-back');
+            const isMobile = () => window.matchMedia('(max-width: 991px)').matches;
+
+            function openMenu() {
+                item.classList.add('is-open');
+                toggle.setAttribute('aria-expanded', 'true');
+                if (isMobile()) nav.classList.add('mega-open');
+            }
+
+            function closeMenu() {
+                item.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
+                nav.classList.remove('mega-open');
+            }
+
+            toggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                item.classList.contains('is-open') ? closeMenu() : openMenu();
+            });
+
+            // backBtn.addEventListener('click', closeMenu);
+
+            document.addEventListener('click', function (e) {
+                if (!item.contains(e.target)) closeMenu();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+
+            window.addEventListener('resize', closeMenu);
+            });
+        </script>
